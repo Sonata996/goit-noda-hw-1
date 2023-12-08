@@ -1,6 +1,5 @@
 import * as serviseContacts from "./contacts.js";
 import yargs from "yargs";
-import { nanoid } from "nanoid";
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
@@ -39,4 +38,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 
 const { argv } = yargs(process.argv.slice(2));
 invokeAction(argv);
-
