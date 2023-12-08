@@ -4,19 +4,16 @@ import yargs from "yargs";
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      // ...
       const getAllContacts = await serviseContacts.listContacts();
       console.log(getAllContacts);
       break;
 
     case "get":
-      // ... id
       const getContactOne = await serviseContacts.getContactById(id);
       console.log(getContactOne);
       break;
 
     case "add":
-      // ... name email phone
       const addContactOne = await serviseContacts.addContact(
         name,
         email,
@@ -26,7 +23,6 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "remove":
-      // ... id
       const removeContact = await serviseContacts.removeContact(id);
       console.log(removeContact);
       break;
