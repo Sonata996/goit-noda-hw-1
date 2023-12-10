@@ -36,9 +36,9 @@ export async function removeContact(contactId) {
   const index = getContacts.findIndex((elem) => elem.id === contactId);
 
   if (index === -1) {
-    return;
+    return null;
   }
   const result = getContacts.splice(index, 1);
   updateContacts(getContacts);
-  return result || null;
+  return result;
 }
